@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# set brightness cuz this laptop is shit
+
+# xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 1.1
+
+# gestures
+# /home/ervin/.local/bin/libinput-gestures-start &
+
+# # "daemons"
+gnome-keyring-daemon --start &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/home/ervin/.local/bin/spotify-notification &
+/home/ervin/.local/bin/battery-notification &
+/home/ervin/.local/bin/autohide.py &
+nwggrid-server &
+# /usr/lib/kdeconnectd &
+
+# wallpaper
+pkill -KILL wallpaper
+pkill -KILL sleep
+/home/ervin/.local/bin/wallpaper &
+# nitrogen /home/ervin/Pictures/Wallpapers/rand/yosemite.png --set-zoom-fill
+
+# lockscreen
+xset s 600 &
+xss-lock -- betterlockscreen -l dimblur &
+
+# various apps
+# /home/ervin/.config/conky/start_qtile.sh -n &
+yes | /home/ervin/.local/bin/rmshit.py &
+# firefox &
+# alacritty &
+# /home/ervin/.local/bin/start-spotify &
+
+# systray
+nm-applet &
+pa-applet --disable-key-grabbing --disable-notifications &
+# kdeconnect-indicator &
+blueman-applet &
+flameshot &
+
+# compositor
+picom --inactive-opacity-override &
+

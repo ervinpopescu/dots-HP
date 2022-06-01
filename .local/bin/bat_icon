@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+bolt=""
+battery_now="$(cat /sys/class/power_supply/BAT1/charge_now /sys/class/power_supply/BAT1/charge_full | tr "\n" " " | awk '{printf "%.0f%", $1/$2*100}')"
+if [[ "$(upower -i /org/freedesktop/UPower/devices/line_power_ACAD | grep online | tr -s " " | cut -d" " -f3)" == "yes" ]]
+then
+	printf "%s" "$battery_now$bolt"
+else
+	printf "%s" "$battery_now"
+fi
