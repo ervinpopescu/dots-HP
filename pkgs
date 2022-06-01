@@ -324,7 +324,6 @@ python-pyclip
 python-pygobject-stubs
 python-pylint
 python-pywal
-python-pywlroots
 python-ruamel-yaml
 python-setuptools-scm
 python-sphinx
@@ -368,7 +367,6 @@ sublime-text
 sudo
 sunwait
 svg2png
-sway
 sysstat
 systemd-boot-pacman-hook
 tcpdump
@@ -402,7 +400,6 @@ webp-pixbuf-loader
 wget
 which
 whois
-wlroots
 wmctrl
 wofi
 x11vnc

@@ -254,8 +254,9 @@ ABBR_TMPDIR=/tmp/zsh-abbr-user/
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 [ -e  /home/ervin/.Xauthority ] && ln -sf /run/user/1000/Xauthority /home/ervin/.Xauthority
 
-#if [ -z "${DISPLAY}" ] && [ "$(tty)" = "/dev/tty8" ]; then
- # startx /bin/zathura
-#fi
+if [ "$(tty)" = "/dev/tty8" ]; then
+ startx /bin/zathura
+fi
 
 fet.sh
+fortune -c -s | grep -wv % | fold -sw "$(tput cols)"
