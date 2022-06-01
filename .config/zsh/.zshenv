@@ -56,7 +56,7 @@ alias egrep='egrep --color=auto'
 alias feh="feh -d --edit --scale-down --auto-zoom"
 alias fgrep='fgrep --color=auto'
 alias gcl='git clone'
-alias gp="git add .; git commit -m 'commit'; git push"
+alias gp="git add .; git commit; git push"
 alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 alias l='ls -a'
