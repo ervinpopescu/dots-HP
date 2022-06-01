@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git -C /home/ervin/www/src/mine/dots add .
-git -C /home/ervin/www/src/mine/dots commit -m 'commit'
+git -C /home/ervin/www/src/mine/dots commit -m 'daily commit'
 git -C /home/ervin/www/src/mine/dots push

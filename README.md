@@ -63,7 +63,7 @@
 
 ## Install
 
-```
+```console
 $ cp etc/zsh/* /etc/zsh
 $ cp .config/* $HOME/.config
 $ mkdir -p $HOME/.local/bin
