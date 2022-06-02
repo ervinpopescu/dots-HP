@@ -16,7 +16,7 @@ def location():
 
 @lazy.function
 def weather_popup(qtile):
-    wtr = subprocess.check_output(["/home/ervin/.local/bin/wttr", "?T", location()])
+    wtr = subprocess.check_output(["/home/ervin/.local/bin/wttr", "?T?0", location()])
     # wtr_cleaned = subprocess.check_output(["sed", '$d;$d'], stdin=wtr.stdout)
     controls = [
         PopupText(
@@ -26,14 +26,14 @@ def weather_popup(qtile):
             fontsize=15,
             foreground="000000",
             text=wtr.decode("utf-8"),
-            width=684,
-            height=650,
+            width=300,
+            height=150,
         )
     ]
     layout = PopupAbsoluteLayout(
         qtile,
-        width=684,
-        height=650,
+        width=300,
+        height=150,
         controls=controls,
         opacity=0.96,
         background=qtile.widgets_map["myweather"].foreground,

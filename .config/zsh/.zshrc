@@ -259,4 +259,4 @@ if [ "$(tty)" = "/dev/tty8" ]; then
 fi
 
 fet.sh
-fortune -c -s | grep -wv % | fold -sw "$(tput cols)"
+fortune -c -s | grep -wv % | fold -sw "$(tput cols)" | lolcat
