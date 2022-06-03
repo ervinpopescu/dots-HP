@@ -1,9 +1,10 @@
 import subprocess
 import requests
 from libqtile import qtile
+from libqtile.log_utils import logger
 from libqtile.lazy import lazy
 from qtile_extras.popup.toolkit import PopupAbsoluteLayout, PopupText
-from .settings import colors, margin_size
+from .settings import margin_size
 
 
 def location():
@@ -16,8 +17,13 @@ def location():
 
 @lazy.function
 def weather_popup(qtile):
-    wtr = subprocess.check_output(["/home/ervin/.local/bin/wttr", "?T?0", location()])
-    # wtr_cleaned = subprocess.check_output(["sed", '$d;$d'], stdin=wtr.stdout)
+    wttr = subprocess.Popen(
+            ["/home/ervin/.local/bin/wttr", "?T?0", location()],
+            stdout=subprocess.PIPE)
+    wtr = subprocess.check_output(
+            ["sed","1d;2d"],
+            stdin=wttr.stdout) 
+    logger.debug("%s", wtr.decode("utf-8"))
     controls = [
         PopupText(
             font="CodeNewRoman Nerd Font Mono",
