@@ -23,6 +23,7 @@ bdf2psf
 betterlockscreen
 bibata-cursor-theme-bin
 binutils
+birthday
 bison
 bleachbit
 blueman
@@ -73,6 +74,7 @@ dos2unix
 dunst
 edk2-ovmf
 efibootmgr
+eog
 espeak
 evince
 eww-git
@@ -261,6 +263,7 @@ networkmanager
 newsboat
 nitrogen
 nm-tray
+nodejs-localtunnel
 noto-fonts-cjk
 noto-fonts-emoji
 npm
@@ -342,6 +345,7 @@ remark-cli
 ripgrep
 rmlint
 rofi
+rtl8821ce-dkms-git
 rustup
 samba
 sassc
@@ -382,6 +386,7 @@ tldr
 tlp
 tmux
 toilet
+translate-shell
 transmission-gtk
 tree
 ttf-font-awesome
@@ -392,6 +397,7 @@ ueberzug
 unclutter
 unrar
 usbutils
+uthash
 virt-manager-meta
 vlc
 w3m
@@ -412,6 +418,7 @@ xdotool
 xf86-video-intel
 xfsudo
 xinit-xsession
+xmousepasteblock-git
 xob
 xorg-fonts-misc
 xorg-server-xephyr

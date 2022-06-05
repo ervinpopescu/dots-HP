@@ -43,7 +43,6 @@ bindkey '^[[Z' undo                               # shift + tab undo last action
 bindkey -s '^o' 'lfcd\n'                          # open lf in current directory 
 bindkey -s '^L' 'clear\n'
 
-
 # enable completion features
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
@@ -257,6 +256,3 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 if [ "$(tty)" = "/dev/tty8" ]; then
  startx /bin/zathura
 fi
-
-fet.sh
-fortune -c -s | grep -wv % | fold -sw "$(tput cols)" | lolcat

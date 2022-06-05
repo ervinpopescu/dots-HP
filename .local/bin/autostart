@@ -5,9 +5,11 @@
 # xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 1.1
 
 # gestures
-# /home/ervin/.local/bin/libinput-gestures-start &
+/home/ervin/.local/bin/libinput-gestures-start &
 
-# # "daemons"
+# "daemons"
+xmousepasteblock & 
+alttab -w 1 -d 2 -i 60x40 -t 60x40 -bg "#1e1d2d" -fg "#d9e0ee" -frame "#ddb6f2" -bw 5 -inact "#1e1d2d" -bc "#000000" -bw 0 &
 gnome-keyring-daemon --start &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /home/ervin/.local/bin/spotify-notification &

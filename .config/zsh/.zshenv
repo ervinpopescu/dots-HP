@@ -41,9 +41,10 @@ export BROWSER='firefox'
 
 # Aliases
 alias SS="sudo systemctl"
-alias systeroid-tui="systeroid-tui --bg-color 1e1e2e"
+alias alttab='alttab -w 1 -d 2 -i 60x60 -t 60x60 -bg "#1e1e2e" -fg "#d9e0ee" -frame "#ddb6f2" -bw 5 -inact "#1e1d2d" -bc "#000000" -bw 0'
 alias b="$HOME/.local/bin/"
 alias beep='paplay $BEEP'
+alias birthday="birthday -f ~/.local/share/birthdays -W 7"
 alias c="$HOME/.config"
 alias cat="bat"
 alias cl="clear; sleep 0.5; la"
@@ -77,10 +78,11 @@ alias q="gnome-session-quit"
 alias rm="rm -rf"
 alias sa="adb forward tcp:8022 tcp:8022 && adb forward tcp:8080 tcp:8080 && ssh localhost -p 8022 -i ~/.ssh/id_rsa_android"
 alias sway="sway --unsupported-gpu"
+alias systeroid-tui="systeroid-tui --bg-color 1e1e2e"
 alias tty-clock="tty-clock -c -C 7 -f '%a, %d %b'"
+alias u='sudo pacman -Syu'
 alias vim="lvim"
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-alias u='sudo pacman -Syu'
 
 # checking for tty or not
 if [[ "$(tty | sed -e 's:/dev/::;s/[0-9]//')" == "tty" ]]
