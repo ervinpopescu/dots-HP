@@ -3,6 +3,7 @@ acestream-launcher
 acpi
 afetch
 alacritty
+alarm-clock-applet
 alsa-utils
 android-sdk-platform-tools
 anydesk-bin
@@ -161,6 +162,7 @@ gvfs-gphoto2
 gvfs-mtp
 gzip
 hexedit
+hourglass
 hplip
 htop
 hw-probe-git
@@ -342,6 +344,7 @@ refind
 reflector
 reflector-nomirrorlist
 remark-cli
+remind
 ripgrep
 rmlint
 rofi
@@ -439,6 +442,7 @@ xsel
 xss-lock
 xxd-standalone
 yay-bin
+yt-dlp
 zathura
 zathura-cb
 zathura-djvu

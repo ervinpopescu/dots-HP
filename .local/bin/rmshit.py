@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import glob
 import os
 import shutil
 
@@ -42,7 +43,6 @@ shittyfiles = [
     '~/.thumbnails',
     '~/.gconfd',
     '~/.gconf',
-    '~/.local/share/gegl-*',
     '~/.FRD/log/app.log',
     '~/.FRD/links.txt',
     '~/.objectdb',
@@ -83,7 +83,20 @@ shittyfiles = [
     '~/.vnc/',
 ]
 
-def yesno(question, default="n"):
+globs = [
+    '~/Matlab*',
+    '~/java.*',
+    '~/.local/share/gegl-*',
+]
+
+shittyglobs = []
+
+for g in globs:
+    shittyglobs.extend(glob.glob(os.path.expanduser(g)))
+
+shittyfiles.extend(shittyglobs)
+
+def yesno(question, default="y"):
     """ Asks the user for YES or NO, always case insensitive.
         Returns True for YES and False for NO.
     """
@@ -99,7 +112,6 @@ def yesno(question, default="n"):
     return False
 
 def rmshit():
-    print("Found shittyfiles:")
     found = []
     for f in shittyfiles:
         absf = os.path.expanduser(f)
@@ -111,7 +123,8 @@ def rmshit():
         print("No shitty files found :)")
         return
 
-    if yesno("Remove all?", default="n"):
+    print("Found shittyfiles:")
+    if yesno("Remove all?", default="y"):
         for f in found:
             if os.path.isfile(f):
                 os.remove(f)

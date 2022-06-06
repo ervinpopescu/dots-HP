@@ -175,6 +175,8 @@ $ cp -al .local/bin/* $HOME/.local/bin/
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/editqtile">editqtile</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/filesizes">filesizes</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/find_hardlink">find_hardlink</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/get_birthdays_from_csv">get_birthdays_from_csv</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/getdata">getdata</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/hdd_usage">hdd_usage</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/lfub">lfub</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/.local/bin/libinput-gestures-start">libinput-gestures-start</a><br>
@@ -215,7 +217,7 @@ $ cp -al .local/bin/* $HOME/.local/bin/
 	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="/usr/share/fonts/Code%20New%20Roman%20Bold%20Nerd%20Font%20Complete%20Mono.otf">Code New Roman Bold Nerd Font Complete Mono.otf</a><br>
 	└── <a href="/wallpaper.png">wallpaper.png</a><br>
 
-24 directories, 113 files
+24 directories, 115 files
 
 </p>
 </body>

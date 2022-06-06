@@ -7,7 +7,6 @@ from qtile_extras import widget
 from .settings import colors, decor
 from .widget_functions import no_text, location, reload, weather_popup
 
-
 def top_widgets():
     return [
         widget.Image(
@@ -60,9 +59,9 @@ def top_widgets():
             margin_x=2,
             margin_y=2,
         ),
-        widget.Spacer(length=bar.STRETCH),
+        widget.Spacer(),
         widget.Systray(),
-        widget.Spacer(length=bar.STRETCH),
+        widget.Spacer(),
         widget.KeyboardLayout(
             font="Font Awesome 6 Free Solid",
             # font="CodeNewRoman Nerd Font Mono Bold",
@@ -82,11 +81,12 @@ def top_widgets():
             padding=5,
             update_interval=60,
             foreground=colors[6],
-            func=lambda: subprocess.check_output("/home/ervin/.local/bin/chkup").decode(
+            func=lambda: subprocess.check_output(
+                "/home/ervin/.local/bin/chkup").decode(
                 "utf-8"
             ),
             mouse_callbacks={
-                "Button1": lazy.spawn("alacritty -e /home/ervin/.local/bin/update")
+                "Button1": lazy.group["scratchpad"].dropdown_toggle("up")
             },
             fmt=" {}",
             **decor
@@ -159,7 +159,6 @@ def top_widgets():
             **decor
         ),
     ]
-
 
 def left_widgets():
     return [

@@ -17,13 +17,12 @@ def reload(module):  # noqa
     if module in sys.modules:
         importlib.reload(sys.modules[module])
 
-
-reload("keys")
-reload("layouts")
-reload("groups")
-reload("mouse")
-reload("settings")
-reload("screens")
+# reload("keys")
+# reload("layouts")
+# reload("groups")
+# reload("mouse")
+# reload("settings")
+# reload("screens")
 
 assert keys
 assert groups
@@ -41,7 +40,6 @@ def autostart():
         [autostart],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.STDOUT)
-
 
 follow_mouse_focus = True
 bring_front_click = False

@@ -32,13 +32,13 @@ def weather_popup(qtile):
             fontsize=15,
             foreground="000000",
             text=wtr.decode("utf-8"),
-            width=300,
+            width=400,
             height=150,
         )
     ]
     layout = PopupAbsoluteLayout(
         qtile,
-        width=300,
+        width=400,
         height=150,
         controls=controls,
         opacity=0.96,

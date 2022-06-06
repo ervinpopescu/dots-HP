@@ -1,14 +1,16 @@
 #!/bin/sh
 
-# set brightness cuz this laptop is shit
-
+## set brightness cuz this laptop is shit
 # xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 1.1
 
-# gestures
+## load X11 defaults
+xrdb -load ~/.config/X11/Xresources
+
+## gestures
 /home/ervin/.local/bin/libinput-gestures-start &
 
-# "daemons"
-xmousepasteblock & 
+## "daemons"
+xmousepasteblock &
 alttab -w 1 -d 2 -i 60x40 -t 60x40 -bg "#1e1d2d" -fg "#d9e0ee" -frame "#ddb6f2" -bw 5 -inact "#1e1d2d" -bc "#000000" -bw 0 &
 gnome-keyring-daemon --start &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -18,30 +20,29 @@ gnome-keyring-daemon --start &
 nwggrid-server &
 # /usr/lib/kdeconnectd &
 
-# wallpaper
-pkill -KILL wallpaper
-pkill -KILL sleep
-/home/ervin/.local/bin/wallpaper &
-# nitrogen /home/ervin/Pictures/Wallpapers/rand/yosemite.png --set-zoom-fill
+## wallpaper
+# pkill -KILL wallpaper
+# pkill -KILL sleep
+# /home/ervin/.local/bin/wallpaper &
+nitrogen /home/ervin/Pictures/Wallpapers/rand/personal-19.png --set-zoom-fill
 
-# lockscreen
+## lockscreen
 xset s 600 &
 xss-lock -- betterlockscreen -l dimblur &
 
-# various apps
+## various apps
 # /home/ervin/.config/conky/start_qtile.sh -n &
 yes | /home/ervin/.local/bin/rmshit.py &
 # firefox &
 # alacritty &
 # /home/ervin/.local/bin/start-spotify &
 
-# systray
+## systray
 nm-applet &
 pa-applet --disable-key-grabbing --disable-notifications &
 # kdeconnect-indicator &
 blueman-applet &
 flameshot &
 
-# compositor
+## compositor
 picom --inactive-opacity-override &
-

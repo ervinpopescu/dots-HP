@@ -8,7 +8,6 @@ from .settings import group_names, group_layouts, group_labels, mod, terminal
 from .keys import keys
 from .matches import d
 
-
 groups = []
 
 for i in range(len(group_names)):
@@ -17,14 +16,19 @@ for i in range(len(group_names)):
               layout=group_layouts[i], label=group_labels[i])
     )
 
+update = ["alacritty", "-e", "/home/ervin/.local/bin/update"]
+
 groups.append(
     ScratchPad(
         "scratchpad",
-        [DropDown("term", terminal, opacity=0.9,
-                  width=0.8, height=0.5, x=0.1, y=0.25)],
+        [
+            DropDown("term", terminal, opacity=0.9,
+                  width=0.8, height=0.5, x=0.1, y=0.25),
+            DropDown("up", update, opacity=0.9,
+                  width=0.8, height=0.5, x=0.1, y=0.25)
+            ],
     )
 )
-
 
 @hook.subscribe.client_new
 def assign_app_group(client):
@@ -42,13 +46,11 @@ def assign_app_group(client):
             client.togroup(group, toggle=False)
             client.group.cmd_toscreen(toggle=False)
 
-
 noswallow = [
     "qutebrowser",
     "Navigator",
     "vlc",
 ]
-
 
 @hook.subscribe.client_new
 def _swallow(window):
@@ -73,12 +75,10 @@ def _swallow(window):
                 return
             ppid = psutil.Process(ppid).ppid()
 
-
 @hook.subscribe.client_killed
 def _unswallow(window):
     if hasattr(window, "parent"):
         window.parent.minimized = False
-
 
 for i, name in enumerate(group_names, 1):
     keys.extend(
