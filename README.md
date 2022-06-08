@@ -63,14 +63,14 @@
 
 ## Install
 
-```console
-$ cp etc/zsh/* /etc/zsh
-$ cp .config/* $HOME/.config
-$ mkdir -p $HOME/.local/bin
-$ cp -al .local/bin/* $HOME/.local/bin/
-# mkdir -p /usr/share/fonts/OTF
-# cp usr/share/fonts/Code* /usr/share/fonts/OTF/
-# fc-cache -f -v 
+```
+cp etc/zsh/* /etc/zsh
+cp .config/* $HOME/.config
+mkdir -p $HOME/.local/bin
+cp -al .local/bin/* $HOME/.local/bin/
+sudo mkdir -p /usr/share/fonts/OTF
+sudo cp usr/share/fonts/Code* /usr/share/fonts/OTF/
+sudo fc-cache -f -v 
 ```
 
 <!DOCTYPE html>
