@@ -47,7 +47,6 @@ def top_widgets():
         widget.Spacer(length=3),
         widget.CurrentLayoutIcon(scale=0.79, padding=3, **decor),
         widget.Spacer(length=3),
-        widget.Spacer(length=3),
         widget.TaskList(
             parse_text=no_text,
             highlight_method="block",

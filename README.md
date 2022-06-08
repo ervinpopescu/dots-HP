@@ -92,6 +92,7 @@ sudo fc-cache -f -v
 	│   │   ├── <a href="/.config/conky/start_qtile.sh">start_qtile.sh</a><br>
 	│   │   └── <a href="/.config/conky/utils.lua">utils.lua</a><br>
 	│   ├── <a href="/.config/lvim/">lvim</a><br>
+	│   │   └── <a href="/.config/lvim/config.lua">config.lua</a><br>
 	│   ├── <a href="/.config/nwg-launchers/">nwg-launchers</a><br>
 	│   │   ├── <a href="/.config/nwg-launchers/nwgbar/">nwgbar</a><br>
 	│   │   │   ├── <a href="/.config/nwg-launchers/nwgbar/bar.json">bar.json</a><br>
@@ -217,7 +218,7 @@ sudo fc-cache -f -v
 	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="/usr/share/fonts/Code%20New%20Roman%20Bold%20Nerd%20Font%20Complete%20Mono.otf">Code New Roman Bold Nerd Font Complete Mono.otf</a><br>
 	└── <a href="/wallpaper.png">wallpaper.png</a><br>
 
-24 directories, 115 files
+24 directories, 116 files
 
 </p>
 </body>

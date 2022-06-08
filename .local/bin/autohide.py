@@ -18,5 +18,5 @@ while True:
     # print(xm,ym,visible)
     if ym == 0 and xm == 0:
         c.hide_show_bar()
-        xdo.move_mouse(1366 // 2, 768 // 2)
+        xdo.move_mouse(1366 // 2, 5)
     sleep(0.05)
