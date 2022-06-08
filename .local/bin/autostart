@@ -11,13 +11,14 @@ xrdb -load ~/.config/X11/Xresources
 
 ## "daemons"
 xmousepasteblock &
+
 alttab -w 1 -d 2 -i 60x40 -t 60x40 -bg "#1e1d2d" -fg "#d9e0ee" -frame "#ddb6f2" -bw 5 -inact "#1e1d2d" -bc "#000000" -bw 0 &
 gnome-keyring-daemon --start &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /home/ervin/.local/bin/spotify-notification &
 /home/ervin/.local/bin/battery-notification &
 /home/ervin/.local/bin/autohide.py &
-nwggrid-server &
+# nwggrid-server &
 # /usr/lib/kdeconnectd &
 
 ## wallpaper

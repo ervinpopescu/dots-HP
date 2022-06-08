@@ -2,6 +2,7 @@
 # SETTINGS #
 ############
 
+from libqtile import qtile
 from qtile_extras.widget.decorations import RectDecoration
 
 from .colors import *
@@ -16,6 +17,8 @@ terminal = "alacritty"
 group_names = "coding www social etc settings media".split()
 group_labels = ["", "", "", "", "", ""]
 group_layouts = ["monadwide", "max", "max", "bsp", "bsp", "monadthreecol"]
+
+qtile.test_data = group_layouts
 
 # Widgets
 
