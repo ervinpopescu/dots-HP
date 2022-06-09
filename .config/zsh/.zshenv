@@ -78,6 +78,7 @@ alias p="sudo pacman"
 alias q="gnome-session-quit"
 alias rm="rm -rf"
 alias sa="adb forward tcp:8022 tcp:8022 && adb forward tcp:8080 tcp:8080 && ssh localhost -p 8022 -i ~/.ssh/id_rsa_android"
+alias sudo='sudo '
 alias sway="sway --unsupported-gpu"
 alias swi="sudo optimus-manager --sw integrated"
 alias swn="sudo optimus-manager --sw nvidia"

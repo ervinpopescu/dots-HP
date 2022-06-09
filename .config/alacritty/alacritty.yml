@@ -390,7 +390,7 @@ colors: *mocha
 
 cursor:
   blinking: Never
-  style: 
+  style:
     shape: Beam
   unfocused_hollow: true
   thickness: 0.15
@@ -417,7 +417,7 @@ font:
     # Style can be specified to pick a specific face.
     style: Italic
 
-  size: 16
+  size: 13
 
   ligatures: true
 
