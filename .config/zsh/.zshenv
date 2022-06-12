@@ -75,6 +75,7 @@ alias nvim="lvim"
 alias o="xdg-open"
 alias oms="sudo optimus-manager --status"
 alias p="sudo pacman"
+alias pacgraph='pacgraph -b "#1e1e2e" -l "#81a1c1" -t "#c9cbff" -d "#f38ba8" -n --disable-palette'
 alias q="gnome-session-quit"
 alias rm="rm -rf"
 alias sa="adb forward tcp:8022 tcp:8022 && adb forward tcp:8080 tcp:8080 && ssh localhost -p 8022 -i ~/.ssh/id_rsa_android"

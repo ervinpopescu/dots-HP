@@ -34,8 +34,8 @@ xss-lock -- betterlockscreen -l dimblur &
 ## various apps
 # /home/ervin/.config/conky/start_qtile.sh -n &
 yes | /home/ervin/.local/bin/rmshit.py &
-# firefox &
-# alacritty &
+firefox &
+alacritty &
 # /home/ervin/.local/bin/start-spotify &
 
 ## systray

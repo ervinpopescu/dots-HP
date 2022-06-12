@@ -6,14 +6,12 @@ from libqtile.lazy import lazy
 from qtile_extras.popup.toolkit import PopupAbsoluteLayout, PopupText
 from .settings import margin_size
 
-
 def location():
     try:
         ip = requests.get("http://ip-api.com/json")
         return ip.json()["regionName"] + "," + ip.json()["country"]
     except Exception:
         return "Bucharest,RO"
-
 
 @lazy.function
 def weather_popup(qtile):
@@ -22,7 +20,7 @@ def weather_popup(qtile):
             stdout=subprocess.PIPE)
     wtr = subprocess.check_output(
             ["sed","1d;2d"],
-            stdin=wttr.stdout) 
+            stdin=wttr.stdout)
     logger.debug("%s", wtr.decode("utf-8"))
     controls = [
         PopupText(
@@ -50,7 +48,6 @@ def weather_popup(qtile):
         y=qtile.current_screen.top.info()["size"] + margin_size,
         warp_pointer=True,
     )
-
 
 def no_text(text):
     return ""

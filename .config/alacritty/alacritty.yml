@@ -1,81 +1,3 @@
-# Colors (Nord)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '#2e3440'
-#     foreground: '#abb2bf'
-
-#   # Normal colors
-#   normal:
-#     black:   '#1e2127'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#abb2bf'
-
-#   # Bright colors
-#   bright:
-#     black:   '#5c6370'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#ffffff'
-
-# colors:
-#   primary:
-#     background: '#2e3440'
-#     foreground: '#d8dee9'
-#     dim_foreground: '#a5abb6'
-#   cursor:
-#     text: '#2e3440'
-#     cursor: '#d8dee9'
-#   vi_mode_cursor:
-#     text: '#2e3440'
-#     cursor: '#d8dee9'
-#   selection:
-#     text: CellForeground
-#     background: '#4c566a'
-#   search:
-#     matches:
-#       foreground: CellBackground
-#       background: '#88c0d0'
-#     bar:
-#       background: '#434c5e'
-#       foreground: '#d8dee9'
-#   normal:
-#     black: '#3b4252'
-#     red: '#bf616a'
-#     green: '#a3be8c'
-#     yellow: '#ebcb8b'
-#     blue: '#81a1c1'
-#     magenta: '#b48ead'
-#     cyan: '#88c0d0'
-#     white: '#e5e9f0'
-#   bright:
-#     black: '#4c566a'
-#     red: '#bf616a'
-#     green: '#a3be8c'
-#     yellow: '#ebcb8b'
-#     blue: '#81a1c1'
-#     magenta: '#b48ead'
-#     cyan: '#8fbcbb'
-#     white: '#eceff4'
-#   dim:
-#     black: '#373e4d'
-#     red: '#94545d'
-#     green: '#809575'
-#     yellow: '#b29e75'
-#     blue: '#68809a'
-#     magenta: '#8c738c'
-#     cyan: '#6d96a5'
-#     white: '#aeb3bb'
-
 color_schemes:
 
   latte: &latte
@@ -392,7 +314,7 @@ cursor:
   blinking: Never
   style:
     shape: Beam
-  unfocused_hollow: true
+  unfocused_hollow: false
   thickness: 0.15
 
 mouse:
@@ -417,7 +339,7 @@ font:
     # Style can be specified to pick a specific face.
     style: Italic
 
-  size: 13
+  size: 15
 
   ligatures: true
 
@@ -430,8 +352,8 @@ font:
 
 window:
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
   history: 10000
 
 # Allow terminal applications to change Alacritty's window title.
@@ -444,10 +366,6 @@ window:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
   save_to_clipboard: true
   live_config_reload: true
-  opacity: 0.96
-
-  startup_mode: Maximized
-  decorations: None
 
 key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
@@ -458,4 +376,3 @@ key_bindings:
   - { key: NumpadAdd, mods: None, action: IncreaseFontSize }
   - { key: NumpadSubtract, mods: None, action: DecreaseFontSize }
   - { key: N, mods: Control, action: SpawnNewInstance }
-  # - { key: L, mods: Control, chars: '\x0C' }

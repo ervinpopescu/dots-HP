@@ -16,7 +16,7 @@ for i in range(len(group_names)):
               layout=group_layouts[i], label=group_labels[i])
     )
 
-update = ["alacritty", "-e", "/home/ervin/.local/bin/update"]
+update = ["alacritty", "-o", "font.size=13", "-e", "/home/ervin/.local/bin/update"]
 
 groups.append(
     ScratchPad(
