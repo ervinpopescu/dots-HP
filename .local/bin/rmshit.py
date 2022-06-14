@@ -6,6 +6,7 @@ import shutil
 
 shittyfiles = [
     '~/.nvidia-settings-rc',
+    '~/.gnupg',
     '~/.xsession-errors',
     '~/.xsession-errors.old',
     '~/.Xauthority',

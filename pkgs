@@ -130,6 +130,7 @@ git
 git-filter-repo
 git-lfs
 git-sizer-bin
+glava
 glow
 gnirehtet-bin
 gnome-backgrounds
@@ -182,12 +183,10 @@ jgmenu
 john
 jp2a
 jq
-kdeconnect
-kdenlive
 kernel-modules-hook
 kexec-tools
 kguiaddons
-kvantum-theme-nordic-git
+kvantum
 ladspa
 lazygit
 lf-bin
@@ -300,7 +299,6 @@ pipewire-pulse
 pixterm
 pkgconf
 pkgstats
-plasma-desktop
 playerctl
 plex-media-player
 plex-media-server
@@ -326,8 +324,6 @@ python-pyclip
 python-pygobject-stubs
 python-pylint
 python-pywal
-python-pywayland
-python-pywlroots
 python-ruamel-yaml
 python-setuptools-scm
 python-sphinx
@@ -411,9 +407,7 @@ webp-pixbuf-loader
 wget
 which
 whois
-wlroots
 wmctrl
-wofi
 x11vnc
 xclip
 xcolor

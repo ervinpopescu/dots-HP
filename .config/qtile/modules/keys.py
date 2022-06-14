@@ -54,29 +54,25 @@ keys = [
     # Layouts
     Key(
         [mod, "control"], "Right",
-        lazy.layout.grow_right(),
-        lazy.layout.grow(),
-        lazy.layout.increase_ratio(),
-        lazy.layout.delete(),
+        lazy.layout.grow_right().when(layout="bsp" or "columns"),
+        lazy.layout.grow().when(layout="monadwide" or "monadtall" or "monadthreecol"),
+        lazy.layout.increase_ratio().when(layout="spiral"),
     ),
     Key(
         [mod, "control"], "Left",
-        lazy.layout.grow_left(),
-        lazy.layout.shrink(),
-        lazy.layout.decrease_ratio(),
-        lazy.layout.add(),
+        lazy.layout.shrink().when(layout="monadwide" or "monadtall" or "monadthreecol"),
+        lazy.layout.grow_left().when(layout="bsp" or "columns"),
+        lazy.layout.decrease_ratio().when(layout="spiral"),
     ),
     Key(
         [mod, "control"], "Up",
-        lazy.layout.grow_up(),
-        lazy.layout.grow(),
-        lazy.layout.decrease_nmaster(),
+        lazy.layout.grow().when(layout="monadwide" or "monadtall" or "monadthreecol"),
+        lazy.layout.grow_up().when(layout="bsp" or "columns"),
     ),
     Key(
         [mod, "control"], "Down",
-        lazy.layout.grow_down(),
-        lazy.layout.shrink(),
-        lazy.layout.increase_nmaster(),
+        lazy.layout.shrink().when(layout="monadwide" or "monadtall" or "monadthreecol"),
+        lazy.layout.grow_down().when(layout="bsp" or "columns"),
     ),
 
     # Layout managing

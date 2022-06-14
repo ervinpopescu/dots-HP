@@ -4,7 +4,7 @@
 # https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
 
 function get_brightness {
-  awk '{print $1/15}' < /sys/class/backlight/intel_backlight/brightness
+  awk '{print $1/75}' < /sys/class/backlight/intel_backlight/brightness
 }
 
 function send_notification {
@@ -24,7 +24,7 @@ case $1 in
   down)
     # decrease the backlight by 10%
     if [ "$(get_brightness)" -gt 10 ]
-    then 
+    then
       brightnessctl s 10%-
       send_notification
     fi

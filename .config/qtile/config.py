@@ -11,18 +11,14 @@ from modules.layouts import layouts, floating_layout
 from modules.mouse import mouse
 from modules.settings import widget_defaults, extension_defaults
 from modules.screens import screens
+import modules.hooks
 
 # Config imports
 def reload(module):  # noqa
     if module in sys.modules:
         importlib.reload(sys.modules[module])
 
-# reload("keys")
-# reload("layouts")
-# reload("groups")
-# reload("mouse")
-# reload("settings")
-# reload("screens")
+reload("hooks")
 
 assert keys
 assert groups

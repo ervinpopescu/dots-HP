@@ -12,6 +12,7 @@ mod = "mod4"
 alt = "mod1"
 menu = "rofi -show drun -terminal alacritty -show-icons"
 terminal = "alacritty"
+update = ["alacritty", "-o", "font.size=13", "-e", "/home/ervin/.local/bin/update"]
 
 # Groups
 group_names = "coding www social etc settings media".split()
