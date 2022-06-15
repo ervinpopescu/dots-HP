@@ -55,6 +55,7 @@ d[group_names[2]] = [
 ]
 d[group_names[3]] = ["virt-manager", "gimp-2.10", "Gimp-2.10"]
 d[group_names[4]] = [
+    "balena-etcher-electron",
     "gnome-control-center",
     "blueman-manager",
     "nitrogen",

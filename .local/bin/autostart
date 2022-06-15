@@ -3,6 +3,9 @@
 ## set brightness cuz this laptop is shit
 # xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 1.1
 
+## stupid me broke my display
+xrandr --output eDP1 --off --output HDMI1 --mode 1280x1024
+
 ## load X11 defaults
 xrdb -load ~/.config/X11/Xresources
 
@@ -25,7 +28,7 @@ gnome-keyring-daemon --start &
 # pkill -KILL wallpaper
 # pkill -KILL sleep
 # /home/ervin/.local/bin/wallpaper &
-nitrogen /home/ervin/Pictures/Wallpapers/rand/personal-19.png --set-zoom-fill
+nitrogen --set-zoom-fill /home/ervin/www/src/mine/dots/wallpaper.png
 
 ## lockscreen
 xset s 600 &

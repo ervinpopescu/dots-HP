@@ -1,6 +1,6 @@
 import subprocess
 
-from libqtile import bar
+from libqtile import bar, qtile
 from libqtile.lazy import lazy
 from qtile_extras import widget
 
@@ -57,6 +57,12 @@ def top_widgets():
             padding_y=3,
             margin_x=2,
             margin_y=2,
+            txt_floating="🗗 ",
+            txt_maximized="🗖 ",
+            txt_minimized="🗕 ",
+            # mouse_callbacks={
+            #     "Button3": lambda: qtile.current_window.kill()
+            #     }
         ),
         widget.Spacer(),
         widget.Systray(),

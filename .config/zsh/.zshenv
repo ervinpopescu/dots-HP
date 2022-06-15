@@ -97,5 +97,5 @@ then
 	alias vim="nvim"
   echo -en "\e[?25h"
 else
-	xhost si:localuser:root > /dev/null
+	# xhost si:localuser:root > /dev/null
 fi

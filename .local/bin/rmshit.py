@@ -81,7 +81,7 @@ shittyfiles = [
     '~/nvvp_workspace/',
     '~/.ansible/',
     '~/.fltk/',
-    '~/.vnc/',
+    # '~/.vnc/',
 ]
 
 globs = [
