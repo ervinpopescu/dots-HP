@@ -4,7 +4,12 @@
 # xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 1.1
 
 ## stupid me broke my display
-xrandr --output eDP1 --off --output HDMI1 --mode 1280x1024
+# xrandr --output eDP1 --off --output HDMI1 --mode 1024x768
+# xrandr --output HDMI1 --off --output eDP1 --mode 1366x768
+pkill x0vncserver
+xrandr --output HDMI1 --off --output eDP1 --mode 1280x720
+x0vncserver -passwordfile ~/.vnc/passwd -display "$DISPLAY" >/dev/null 2>&1 &
+xbacklight -set 0
 
 ## load X11 defaults
 xrdb -load ~/.config/X11/Xresources

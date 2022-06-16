@@ -40,7 +40,7 @@ bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
-bindkey -s '^o' 'lfcd\n'                          # open lf in current directory 
+bindkey -s '^o' 'lfcd\n'                          # open lf in current directory
 bindkey -s '^L' 'clear\n'
 
 # enable completion features
@@ -58,7 +58,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
- 
+
 # pip zsh completion start
 function _pip_completion {
   local words cword
@@ -247,9 +247,9 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 #sourcing
-[ -e /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ] && source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 ABBR_TMPDIR=/tmp/zsh-abbr-user/
-[ -e /home/ervin/www/src/cloned/zsh-abbr/zsh-abbr.zsh ] && source /home/ervin/www/src/cloned/zsh-abbr/zsh-abbr.plugin.zsh
+source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 [ -e  /home/ervin/.Xauthority ] && ln -sf /run/user/1000/Xauthority /home/ervin/.Xauthority
 
