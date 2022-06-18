@@ -125,6 +125,8 @@ keys = [
         lazy.spawn("rofi -mode window -show window")),
     Key([mod], "a",
         lazy.spawn(menu)),
+    Key([], "Menu",
+        lazy.spawn(menu)),
     # Key([mod], "p",
     #     lazy.spawn("nwggrid")),
     Key([mod], "x",
