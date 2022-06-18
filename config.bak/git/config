@@ -1,0 +1,10 @@
+[user]
+	email = ervin.popescu10@gmail.com
+	name = ervinpopescu
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

@@ -49,7 +49,7 @@ alias c="$HOME/.config"
 alias cat="bat"
 alias cl="clear; sleep 0.5; la"
 alias copy="xclip -selection clipboard"
-alias cp="cp -iv"
+alias cp="cp -v"
 alias d="$HOME/www/src/mine/dots"
 alias df="df -h -x tmpfs -x devtmpfs -x squashfs"
 alias diff='diff --color=auto'
@@ -60,11 +60,9 @@ alias gcl='git clone'
 alias gp="git add .; git commit; git push"
 alias grep='grep --color=auto'
 alias ip='ip --color=auto'
-alias l='ls -a'
-alias la='ls -a'
 alias lf='lfub'
 alias ll="ls -aghl"
-alias ls='exa --color=auto --icons -H'
+alias ls='exa --color=auto --icons -aH'
 alias md="mdless"
 alias mysql-workbench='mysql-workbench --configdir="$XDG_DATA_HOME/mysql/workbench"'
 alias neo-ru="neo-matrix --color=red --charset=cyrillic -m 'IN SOVIET RUSSIA, COMPUTER PROGRAMS YOU'"
@@ -92,7 +90,7 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 # checking for tty or not
 if [[ "$(tty | sed -e 's:/dev/::;s/[0-9]//')" == "tty" ]]
 then
-	alias ls="exa -H"
+	alias ls="exa -aH"
 	alias nvim="nvim"
 	alias vim="nvim"
   echo -en "\e[?25h"

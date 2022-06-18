@@ -1,0 +1,13 @@
+#!/bin/python
+
+# do `pip install praw` to install the library otherwise this will not work.
+import praw
+reddit = praw.Reddit(
+    client_id="2UAPaDRaphd6dkSjeYto3w",
+    client_secret="NICAc6PByL6ZjTRZ3bA5CZ3zR3cETg",
+    username="ervinpop",
+    user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:100.0) Gecko/20100101 Firefox/100.0",
+    password="ervinpop1A#"
+)
+user = reddit.redditor('ervinpop')
+print(user.link_karma + user.comment_karma + user.awarder_karma + user.awardee_karma)
