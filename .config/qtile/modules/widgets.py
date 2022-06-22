@@ -108,6 +108,17 @@ def top_widgets():
             mouse_callbacks={"Button1": weather_popup()},
             **decor
         ),
+        # widget.GenPollText(
+        #     update_interval=3600,
+        #     foreground=colors[6],
+        #     padding=10,
+        #     font="CodeNewRoman Nerd Font Mono Bold",
+        #     func=lambda: subprocess.check_output(
+        #         ["curl", "https://wttr.in/?format=%22%t%22"]
+        #         ).strip('"'),
+        #     mouse_callbacks={"Button1": weather_popup()},
+        #     **decor
+        # ),
         widget.Spacer(length=3),
         widget.MyBattery(
             update_interval=1,

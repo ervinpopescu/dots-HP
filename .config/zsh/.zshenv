@@ -60,8 +60,9 @@ alias gcl='git clone'
 alias gp="git add .; git commit; git push"
 alias grep='grep --color=auto'
 alias ip='ip --color=auto'
+alias la=ls
 alias lf='lfub'
-alias ll="ls -aghl"
+alias ll="ls -ghl"
 alias ls='exa --color=auto --icons -aH'
 alias md="mdless"
 alias mysql-workbench='mysql-workbench --configdir="$XDG_DATA_HOME/mysql/workbench"'

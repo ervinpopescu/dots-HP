@@ -1,164 +1,102 @@
-configuration {
-    modi:                   "drun";
-    font:                   "Iosevka Nerd Font 15";
-    show-icons:             true;
-    icon-theme:             "Papirus";
-    terminal:               "alacritty";
-    drun-display-format:    "{icon} {name}";
-    display-drun:           " ";
-    location:               0;
+configuration{
+    modi: "run,drun,window";
+    font: "JetBrainsMono Nerd Font 14";
+    show-icons: true;
+    /* icon-theme: "WhiteSur"; */
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps ";
+    display-run: " Run ";
+    display-window: " 﩯 window";
+    sidebar-mode: true;
 }
-* {
-    selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
-    foreground:                  rgba ( 193, 193, 193, 100 % );
-    normal-foreground:           @foreground;
-    alternate-normal-background: #2e3440;
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 255, 24, 68, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           rgba ( 255, 24, 68, 100 % );
-    alternate-urgent-background: #2e3440;
-    active-foreground:           rgba ( 128, 203, 196, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  rgba ( 228, 203, 196, 100 % );
-    alternate-active-background: #2e3440;
-    background:                  #2e3440;
-    bordercolor:                 #4d5673;
-    alternate-normal-foreground: @foreground;
-    normal-background:           #2e3440;
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #4c566a;
-    border-color:                @foreground;
-    spacing:                     2;
-    separatorcolor:              rgba ( 30, 37, 41, 100 % );
-    urgent-background:           #2e3440;
-    selected-urgent-background:  rgba ( 57, 66, 73, 100 % );
-    alternate-urgent-foreground: @urgent-foreground;
-    background-color:            #2e3440;
-    alternate-active-foreground: @active-foreground;
-    active-background:           #2e3440;
-    selected-active-background:  rgba ( 57, 66, 73, 100 % );
-    prompt-color:                #5d71b3;
-}
-window {
-    background-color: @background;
-    border:           1;
-    padding:          0px;
-    height:           560px;
-    width:            500px;
-    columns:          1;
-    border-radius:    5px;
-    border-color:     @bordercolor;
-}
-mainbox {
-    border:  0;
-    padding: 5px;
-    border-radius: 2px;
-}
-message {
-    border:       1px dash 0px 0px ;
-    border-color: @separatorcolor;
-    padding:      1px ;
-}
-textbox {
-    text-color: @foreground;
-}
-listview {
-    fixed-height: 0;
-    border:       0px 0px 0px ;
-    border-color: @separatorcolor;
-    spacing:      2px ;
-    scrollbar:    false;
-    padding:      6px 0px 0px ;
-    column: 1;
-}
-element {
-    border:  0;
-    padding: 5px ;
-}
-element-icon {
-    size: 25px;
-}
-element-text {
+
+@theme "catppuccin"
+
+element-text, element-icon , mode-switcher {
     background-color: inherit;
     text-color:       inherit;
 }
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+
+window {
+    height: 560px;
+    width: 500 px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
 }
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+
+mainbox {
+    background-color: @bg-col;
 }
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-radius: 3px;
-}
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-    border-radius:    3px;
-}
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-    border-radius:    3px;
-}
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
-mode-switcher {
-    border:       2px dash 0px 0px ;
-    border-color: @separatorcolor;
-}
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
+
 inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px ;
-    children:   [prompt, entry];
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
 }
-case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-entry {
-    padding: 5px;
-    spacing:    0;
-    text-color: @normal-foreground;
-}
+
 prompt {
-    background-color: @border-color;
-    padding: 5px 5px 0px;
-    spacing:    0;
-    text-color: @background-foreground;
-    border-radius: 2px;
-    background-color: @prompt-color;
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
 }
-inputbar {
-    children:   [ prompt,entry ];
-}
+
 textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    /*margin:     0px 0.3em 0em 0em ;
-    text-color: @normal-foreground;*/
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 1;
+    lines: 10;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
 }
